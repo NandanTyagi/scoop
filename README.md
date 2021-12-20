@@ -46,7 +46,7 @@ Transparency in news can make way for a more democratic and freer thinking press
 Readers get access to more accurate and transparent news content that mainstream media won't give them. 
 They also earn a reward for flagging articles for further inaccuracies and suggesting topics for writers to cover. 
 
-###Journalists/Content Creators 
+### Journalists/Content Creators 
 Journalists get to be in full control of what they write about, not being tethered any overlying political agendas. 
 They have full freedom for their voices to be heard and never suppressed by a bigger entity.
 Writing about warzones is a good example of a sensitive topic that risks being removed or tampered with by other networks. 
@@ -67,7 +67,7 @@ The study found that it might help improve political discourse by increasing the
 This would only serve to aid bigger organizations in their efforts to distribute honest news and reduce operational costs.
 
 ## How does the system work?
-####Simply put, writers produce and submit content, which is inspected for accuracy by a randomized set of reviewers on the network. 
+#### Simply put, writers produce and submit content, which is inspected for accuracy by a randomized set of reviewers on the network. 
 Articles deemed acceptable enough (as per SCOOP’s guidelines) will be published to the network and made available to readers. 
 These parties, in turn, can all earn token rewards for their respective efforts on the platform.
 Writers earn tokens for getting article published according to SCOOP’s editorial guidelines.
