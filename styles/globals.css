@@ -43,37 +43,116 @@ margin: auto;
 /************** The Layout Grid  ******************/
 .grid-container-main {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   place-items: center;
   gap: 1rem;
 }
 .grid-item-main {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   text-align: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.grid-item-main:last-of-type {
-  
-}
 /*****************  Side Containers ***********************/
+.grid-item-main:first-of-type {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.grid-item-main:last-of-type {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .side-container {
-border: 1px solid black;
-margin: 0.5rem;
-width: 70%;
+  /* border: 1px solid black; */
+  margin: 0.5rem 0;
+  width: 80%;
 }
 .card{
   background-color: #C4C4C4;
+  height:30vh;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: 2px 2px 2px #817b7b;
+  overflow: hidden;
+}
+/*****************  Center Container ***********************/
+.large-card {
+  background-color: #C4C4C4;
+  height:50vh;
+  width: 100%;
+  margin: 0.5rem 0 0 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #817b7b;
+  overflow: hidden;
+  
+}
+.large-pic-container {
+  /* border: 1px solid blue; */
+  position: relative;
+  height:50%;
+}
+.large-pic-container:hover{
+  transform: scale(1.1);
+  transition: transform 2s ease-in-out; 
+}
+.large-text-container {
+  /* border: 1px solid orange; */
+  padding: rem;
+  height:50%;
 }
 .pic-container {
-  border: 1px solid blue;
-  padding: 1rem;
+  /* border: 1px solid blue; */
+  padding: 0;
+  height:50%;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+img {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+.pic-container:hover{
+  transform: scale(1.1);
+  transition: transform 2s ease-in-out; 
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 5px 5px 0 0;
+}
+.overlay:hover {
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
 }
 .text-container {
-  border: 1px solid orange;
-  padding: 1rem;
+  /* border: 1px solid orange; */
+  padding: 0 0.5rem;
+  height:50%;
+}
+.title{
+  text-align: left;
+  margin-top: 2px;
+  padding: 2px 0 0 0.5rem;
+  
+}
+.text {
+  font-size: x-small;
+  text-align: left;
+  padding: 0 0.5rem;
+
 }
