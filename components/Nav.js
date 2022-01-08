@@ -1,7 +1,7 @@
 import Link from "next/link";
 import NavLink from "./NavLink";
 const Nav = () => {
-    let stnCss = "ml-5 p-2 text-gray-100";
+    let stnCss = "ml-5 p-2 text-gray-100 nav-link";
   return (
     <nav className="bg-gray-400 p-2 ">
       <ul className="flex justify-center container grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 text-sm sm:text-base">

@@ -11,7 +11,7 @@ const LargeCard = ({id, title, body, img}) => {
 
   return (
     <>
-    
+      <Link href={"/article/[id]"} as={`/article/${id}`}>
       <div className="large-card">
         <div id={id} className="large-pic-container">
           <img src="/img/image.jpg" alt="" />
@@ -22,8 +22,10 @@ const LargeCard = ({id, title, body, img}) => {
           <p className="text">
            {body}
           </p>
+          <div className="truth-meter-container"></div>
         </div>
       </div>
+      </Link>
      
     </>
   );

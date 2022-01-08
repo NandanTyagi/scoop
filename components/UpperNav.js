@@ -2,7 +2,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 
 const UpperNav = () => {
-  let stnCss = "upper-nav-item text-xs sm:text-base"
+  let stnCss = "upper-nav-item text-xs sm:text-base nav-link"
   return (
     <ul className="upper-nav bg-blue-800">
        <NavLink css={stnCss} rout="" text="Home" />
