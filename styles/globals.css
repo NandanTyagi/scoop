@@ -3,36 +3,246 @@
 @tailwind utilities;
 @font-face {
   font-family: NicoMoji;
-  src: url('../fonts/NicoMoji-Regular.ttf');
+  src: url("../fonts/NicoMoji-Regular.ttf");
 }
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: NicoMoji, sans-serif;
-  color: #F0EBEB;
+  color: #f0ebeb;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+li{
+  list-style-type: none;
+}
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.search-bar{
-  border-bottom: 1px solid #F0EBEB;
+.search-bar {
+  border-bottom: 1px solid #f0ebeb;
+  height: fit-content;
 }
-input:focus{
+input:focus {
   outline: none;
 }
-.upper-nav{
-display: flex;
-justify-content: flex-end;
-width: 100%;
-margin: auto;
+.login-dropdown-container{
+  display: none;
+  position: absolute;
 }
-.upper-nav-item{
+.login-btn:hover .login-dropdown-container{
+  display: block;
+}
+.nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.upper-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: auto;
+}
+.upper-nav-item {
   margin: 0 1rem;
+}
+.nav-link:hover{
+  color:#0d0d0e;
+  transform:scale(1.05);
+  transition: transform 0.6s ease;
+  transition: color 0.6s ease;
+}
+
+main {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/****************** Home Page  ******************/
+/************** The Layout Grid  ******************/
+.grid-container-main {
+  display: grid;
+  grid-template-columns:  2fr 4fr 2fr;
+  place-items: center;
+  gap: 1rem;
+  z-index: 10;
+  max-width: 1300px;
+  min-width: 700px;
+}
+.grid-item-main {
+  /* border: 1px solid red; */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+}
+/*****************  Side Containers ***********************/
+.grid-item-main:first-of-type {
+  justify-content: flex-start;
+  align-items: flex-end;
+  max-width: 300px;
+}
+.grid-item-main:last-of-type {
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 300px;
+}
+.side-container {
+  /* border: 1px solid black; */
+  margin: 0.5rem 0 1rem 0;
+  width: 80%;
+}
+.card {
+  background-color: #c4c4c4;
+  height: 30vh;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: 2px 2px 2px #817b7b;
+  overflow: hidden;
+  cursor: pointer;
+}
+/*****************  Center Container ***********************/
+.large-card {
+  background-color: #c4c4c4;
+  height: 50vh;
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #817b7b;
+  overflow: hidden;
+  cursor: pointer;
+}
+.large-pic-container {
+  /* border: 1px solid blue; */
+  position: relative;
+  height: 60%;
+}
+.large-pic-container:hover {
+  transform: scale(1.04);
+  transition: transform 2s ease-in-out;
+}
+.large-text-container {
+  /* border: 1px solid orange; */
+  padding: 0.5rem;
+  height: 40%;
+  position: relative;
+}
+.pic-container {
+  /* border: 1px solid blue; */
+  padding: 0;
+  height: 60%;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+img {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+.pic-container:hover {
+  transform: scale(1.04);
+  transition: transform 2s ease-in-out;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 5px 5px 0 0;
+}
+.overlay:hover {
+  opacity: 0.2;
+  
+  transition: opacity 0.5s ease-in-out;
+}
+.text-container {
+  /* border: 1px solid orange; */
+  padding: 0 0.5rem;
+  height: 40%;
+  padding: 0.5rem;
+  position: relative;
+}
+.title {
+  text-align: left;
+  margin-top: 2px;
+  padding: 0.5rem 0 1rem 0.5rem;
+  line-height: 1;
+  font-size: smaller;
+  font-weight: 700;
+  
+}
+.text {
+  font-size: x-small;
+  text-align: left;
+  padding: 0 0.5rem;
+}
+.large-text-container .text {
+  font-size: small;
+  font-weight: 600;
+}
+.truth-meter-container{
+  border: 2px solid black;
+  height: 1rem;
+  width: 2rem;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  /************** The Layout Grid  ******************/
+ 
+  .grid-container-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    z-index: 10;
+    flex-grow: 1;
+    width: 90%;
+}
+.grid-item-main, .grid-item-main:first-of-type,.grid-item-main:last-of-type {
+  display: flex;
+  flex-direction: column;
+  max-width: 100% !important;
+  justify-content: center;
+  align-items: center;
+}
+.side-container {
+  /* border: 1px solid black; */
+  /* margin: 0.5rem 0 1rem 0;
+  width: 80%; */
+  display: flex;
+  justify-content: center;
+}
+.card {
+  width: 80%;
+  height: 400px;
+  padding: 0.5rem;
+}
+.large-card {
+  max-width:80% !important;
+  display: none;
+}
 }

@@ -18,7 +18,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <link rel="icon" type="image/svg" href="./img/Logo_MTM_SVG.svg" />
+          <link rel="icon" type="image/svg" href="" />
           <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"

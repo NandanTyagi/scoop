@@ -1,13 +1,15 @@
 import Link from "next/link";
+import NavLink from "./NavLink";
 
 const UpperNav = () => {
+  let stnCss = "upper-nav-item text-xs sm:text-base nav-link"
   return (
-    <ul className="upper-nav">
-      <li className="upper-nav-item"><Link href='/'>Home</Link></li>
-      <li className="upper-nav-item"><Link href='/about'>About</Link></li>
-      <li className="upper-nav-item"><Link href='/news'>News</Link></li>
-      <li className="upper-nav-item"><Link href='/contact'>Contact</Link></li>
-      <li className="upper-nav-item"><Link href='/international'>International</Link></li>
+    <ul className="upper-nav bg-blue-800">
+       <NavLink css={stnCss} rout="" text="Home" />
+       <NavLink css={stnCss} rout="about" text="About" />
+       <NavLink css={stnCss} rout="news" text="News" />
+       <NavLink css={stnCss} rout="contact" text="Contact" />
+       <NavLink css={stnCss} rout="international" text="International" />
     </ul>
   );
 };
