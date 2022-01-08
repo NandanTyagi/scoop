@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "./Header";
-import Nav from "./Nav";
+import NavContainer from "./NavContainer";
 import Main from "./Main";
 const Layout = ({ children }) => {
   return (
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         <title>Scoop</title>
       </Head>
       <Header />
-      <Nav />
+      <NavContainer />
       <Main>
       {children}
       </Main>

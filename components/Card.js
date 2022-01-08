@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Card = ({image, title, text}) => {
+const Card = ({image, title, body, id}) => {
+  const handelClick = (e) => {
+    console.log(e.target)
+    
+  }
     return (
         <div className="side-container">
-          <div className="card">
+          <div id={id} className="card" onClick={(handelClick)}>
             <div className="pic-container">
                 
                 <img src="./img/image.jpg" />
@@ -11,8 +15,8 @@ const Card = ({image, title, text}) => {
                 <div className="overlay"></div>
             </div>
             <div className="text-container">
-                <h3 className="title">Title</h3>
-                <p className="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, ducimus?</p>
+                <h3 className="title">{title}</h3>
+                <p className="text">{body}</p>
             </div>
           </div>
         </div>

@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import Link from "next/link";
+import {useRouter} from 'next/router'
 
-const LargeCard = ({ image, title, text }) => {
+
+
+const LargeCard = ({id, title, body, img}) => {
+  const [target, setTarget] = useState("");
+  
+  const router = useRouter()
+
   return (
-    <div className="large-card">
-      <div className="large-pic-container">
-          <img src="/img/image.jpg" alt="" srcset="" />
-        <div className="overlay"></div>
+    <>
+    
+      <div className="large-card">
+        <div id={id} className="large-pic-container">
+          <img src="/img/image.jpg" alt="" />
+          <div className="overlay"></div>
+        </div>
+        <div className="large-text-container">
+          <h3 className="title">{title}</h3>
+          <p className="text">
+           {body}
+          </p>
+        </div>
       </div>
-      <div className="large-text-container">
-          <h3 className="title">Title</h3>
-          <p className="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit ratione recusandae eaque quo atque nulla dolorum corrupti provident aliquam, alias vel, at error vitae. Culpa, voluptatem deleniti. Possimus officiis explicabo incidunt fuga nihil ab, rerum non accusantium harum nesciunt praesentium quaerat excepturi fugit id aperiam. Necessitatibus, laboriosam. Quidem, quam vero!</p>
-      </div>
-    </div>
+     
+    </>
   );
 };
 
