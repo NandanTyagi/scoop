@@ -1,10 +1,10 @@
 import Link from "next/link";
 import NavLink from "./NavLink";
 const Nav = () => {
-    let stnCss = "ml-5 p-2 text-gray-100 nav-link";
+    let stnCss = "text-gray-100 nav-link";
   return (
     <nav>
-      <ul className="">
+      <ul className="nav-links">
         <NavLink css={stnCss} rout="politics" text="Politics" />
         <NavLink css={stnCss} rout="culture" text="Culture" />
         <NavLink css={stnCss} rout="science" text="Science" />

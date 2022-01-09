@@ -2,6 +2,7 @@ import HomePage from "../components/HomePage";
 import { createContext } from "react";
 
 export const ArticleContext = createContext(null);
+
 export default function Home({ articles }) {
   console.log("articles", articles);
   return (

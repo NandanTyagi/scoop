@@ -1,11 +1,3 @@
-import React from 'react'
-
-const MenuContext = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default MenuContext
+import { createContext } from "react";
+export const MenuContext = createContext(null);
+export default MenuContext;

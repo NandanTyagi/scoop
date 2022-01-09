@@ -1,13 +1,18 @@
-import React, {useState} from 'react'
-
+import React, {useState, useContext} from 'react'
+import { MenuContext } from "../contexts/MenuContext.js";
 
 
 const HamburgerMenu = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    
+    const {menuOpen,setMenuOpen} = useContext(MenuContext)
+    // const menuOpen = false;
     const handelClick = () => {
+
+        if(menuOpen)console.log('menuOpenHam',menuOpen );
         if(menuOpen)setMenuOpen(false);
+        if(!menuOpen)console.log('menuOpenHam',menuOpen );
         if(!menuOpen)setMenuOpen(true);
+
+        
     }
     return (
         <button className={menuOpen ? "menu opened" :"menu"} aria-label="Main Menu" onClick={()=>handelClick()}>
