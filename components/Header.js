@@ -1,14 +1,13 @@
 import Logo from "./Logo";
 import LogSignBtn from "./LogSignBtn";
-// import UpperNav from "./UpperNav";
+import Hamburger from "./HamburgerMenu";
 
 const Header = () => {
   return (
-    <header className="bg-blue-800">
+    <header>
       <LogSignBtn />
       <Logo />
-      {/* <UpperNav /> */}
-      
+      <Hamburger/>
     </header>
   );
 };
