@@ -7,13 +7,13 @@ const LogSignBtn = () => {
     <div className="log-search-bar">
       <SearchBar/>
       <span className="login-btn nav-link" id="login-btn">
-        Login
+        Connect Wallet
         <span className="chevron nav-link" >
           <i className="fas fa-chevron-down"></i>
         </span>
         <LoginDropdown/>
       </span>
-      <span className="nav-link login-btn" id="sign-up-btn">Sign up</span>
+      {/* <span className="nav-link login-btn" id="sign-up-btn">Sign up</span> */}
     </div>
   );
 };

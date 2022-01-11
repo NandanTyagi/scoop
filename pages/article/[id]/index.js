@@ -5,7 +5,7 @@ import NavLink from '../../../components/NavLink'
 const article = () => {
     const router = useRouter()
     const {id} = router.query
-    let stnCss = "ml-5 p-2 text-gray-100 nav-link text-gray-600";
+    let stnCss = "text-black";
     return (
         <>
         <NavLink rout="" text="< Back" css={stnCss}/>
