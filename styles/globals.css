@@ -343,7 +343,7 @@ button.menu {
     right: 10px;
   }
   .cont {
-    transform: translateY(-205px);
+    transform: translateY(-223px);
     transition: transform 1s ease;
   }
   .exp {
@@ -382,7 +382,7 @@ button.menu {
   }
   .nav-link {
     padding: 0.5rem 0;
-    font-size: xx-small;
+    font-size: small;
   }
   .login-btn {
     padding: 0.5rem;
