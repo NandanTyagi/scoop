@@ -124,7 +124,7 @@ main {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/****************** Home Page  ******************/
+/*************************** Home Page *************************/
 /************** The Layout Grid  ******************/
 .grid-container-main {
   display: grid;
@@ -268,6 +268,23 @@ button.menu {
   display: none;
 }
 
+/*************************** About Page *************************/
+/* .about-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about {
+  margin: 1rem;
+  padding: 2rem;
+  border: 1px solid black;
+}
+.about h1, .about h2,.about h3,.about p {
+  margin: 1rem;
+  width: 70ch;
+} */
+
 @media screen and (min-width: 800px) {
   .nav-container .log-search-bar {
     display: none;
@@ -320,7 +337,7 @@ button.menu {
   .log-search-bar {
     display: flex;
     justify-content: space-around;
-    padding: 1.5rem 1rem;
+    padding: 0.5rem 1rem 2rem 1rem;
     font-size: xx-small;
     background-color: var(--header-bg-color);
   }
@@ -343,7 +360,7 @@ button.menu {
     right: 10px;
   }
   .cont {
-    transform: translateY(-223px);
+    transform: translateY(-215px);
     transition: transform 1s ease;
   }
   .exp {
@@ -429,5 +446,18 @@ button.menu {
   .large-card {
     max-width: 80% !important;
     display: none;
+  }
+
+  /******************************** About page ***************************/
+  .about h1, .about h2,.about h3,.about p {
+    width: 40ch;
+    padding: 1.5rem 0 0.5rem 0;
+  }
+  .about h1, .about h2,.about h3{
+    font-weight: bold;
+  }
+  .about > h1 {
+  
+
   }
 }
